@@ -58,7 +58,13 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
-
+  window.addEventListener('keydown', (key) => {
+    const audio = document.querySelector(`audio[data-key="${key.keyCode}"]`);
+    console.log(key);
+    if (!audio) return; // If the key has no sound the code will not return an error
+    audio.currentTime = 0; //	The time indicated by the currentTime attribute has been updated.
+    audio.play();
+  });
 </script>
 
 
