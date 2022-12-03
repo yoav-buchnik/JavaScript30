@@ -34,12 +34,13 @@
       .clock {
         width: 30rem;
         height: 30rem;
-        border: 20px solid white;
-        border-radius: 50%;
+        border: 15px solid white;
+        border-radius: 20%;
         margin: 50px auto;
         position: relative;
         padding: 2rem;
-        box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
+        background: #fff url(./ios_clock.svg) no-repeat center;
+        box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 1px #efefef,
           inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
       }
 
@@ -59,8 +60,8 @@
         position: absolute;
         top: 50%;
         transform-origin: 100%; /* Keep clock hand always in the middle */
-        transform: rotate(90deg);
-        transition: all 0.05s;
+        transform: rotate(90deg); /* Start from 00:00 */
+        transition: all 0.02s;
         transition-timing-function: cubic-bezier(0, 3.23, 0.48, 0.98);
       }
     </style>
