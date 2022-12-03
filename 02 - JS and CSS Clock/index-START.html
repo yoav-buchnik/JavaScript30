@@ -73,13 +73,13 @@
         const minutes = currentTime.getMinutes();
 
         const hourHand = document.querySelector('.hand[class="hand hour-hand"]');
-        hourHand.style.transform = `rotate(${(hour * 30 + minutes * 0.5)%450 + 90}deg)`; // Every hour is 30 deg, and add the ratio of minutes
+        hourHand.style.transform = `rotate(${(hour * 30 + minutes * 0.5) + 90}deg)`; // Every hour is 30 deg, and add the ratio of minutes.
 
         const minHand = document.querySelector('.hand[class="hand min-hand"]');
-        minHand.style.transform = `rotate(${(minutes * 6)%450 + 90}deg)`; // Every tick is 6 deg and need to add 90deg for begining
+        minHand.style.transform = `rotate(${(minutes * 6 + second * 0.1) + 90}deg)`; // Every tick is 6 deg, and add the ratio of second.
 
         const secondHand = document.querySelector('.hand[class="hand second-hand"]');
-        secondHand.style.transform = `rotate(${(second * 6)%450 + 90}deg)`; // Every tick is 6 deg and need to add 90deg for begining
+        secondHand.style.transform = `rotate(${(second * 6) + 90}deg)`; // Every tick is 6 deg.
         
       };
 
